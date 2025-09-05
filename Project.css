@@ -1,0 +1,98 @@
+/* Global */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #89f7fe, #66a6ff);
+    display: flex; justify-content: center; padding: 50px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+/* Container */
+.container {
+    background: #ffffffdd;
+    padding: 30px;
+    border-radius: 30px;
+    width: 400px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+    transition: 0.5s;
+}
+
+/* Dark Mode */
+body.dark { background: #1a1a1a; color: #eee; }
+body.dark .container { background: #333; }
+
+/* Title */
+h1 { text-align: center; color: #333; margin-bottom: 20px; }
+body.dark h1 { color: #fff; }
+
+/* Mode Toggle */
+.mode-toggle { text-align: right; margin-bottom: 10px; }
+.mode-toggle input { margin-right: 5px; }
+
+/* Input area */
+.input-area { display: flex; gap: 10px; margin-bottom: 20px; }
+input, select, button {
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+input { flex: 1; }
+button {
+    background: linear-gradient(90deg,#ff6ec4,#7873f5);
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button:hover { transform: scale(1.05); }
+
+/* Task list */
+ul { list-style: none; min-height: 100px; }
+li {
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, opacity 0.3s;
+    cursor: grab;
+}
+li.High { background-color: #ffcccc; }
+li.Medium { background-color: #ffe5b4; }
+li.Low { background-color: #ccffcc; }
+li.completed { text-decoration: line-through; opacity: 0.6; transform: translateX(20px); }
+
+/* Delete button */
+.deleteBtn {
+    background: #ff4d4d;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 15px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.deleteBtn:hover { background: #cc0000; }
+
+/* Well Done Box */
+#wellDone {
+    margin-top: 20px;
+    background: #ffe066;
+    padding: 15px;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: 0.5s;
+}
+#wellDone.show { opacity: 1; transform: scale(1); }
+.hidden { display: none; }
+
+/* Dragging effect */
+.dragging { opacity: 0.5; transform: scale(1.02); }

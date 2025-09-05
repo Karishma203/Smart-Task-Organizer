@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Task Organizer</title>
+  <link rel="stylesheet" href="Project.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📝 Advanced Task Organizer</h1>
+    
+    <div class="mode-toggle">
+      <label>
+        <input type="checkbox" id="toggleMode">
+        Dark Mode
+      </label>
+    </div>
+
+    <div class="input-area">
+      <input type="text" id="taskInput" placeholder="Enter your task">
+      <select id="priority">
+        <option value="High">🔥 High</option>
+        <option value="Medium">⚡ Medium</option>
+        <option value="Low">✅ Low</option>
+      </select>
+      <button id="addBtn">Add Task</button>
+    </div>
+
+    <ul id="taskList"></ul>
+    <div id="wellDone" class="hidden">🎉 Well Done! Task Completed! 🎉</div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
